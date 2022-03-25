@@ -4,7 +4,9 @@
   "description": "ESLint plugins for Discord",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/lib/index.js"
+    "test": "./node_modules/.bin/mocha tests/lib/index.js",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "eslint",
@@ -17,5 +19,9 @@
     "jsx-ast-utils": "2.0.1",
     "mocha": "5.0.5"
   },
-  "private": true
+  "private": true,
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
+  }
 }
